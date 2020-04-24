@@ -5,20 +5,47 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|password|string|null: false|
+|username|string|null: false|
 
-* System dependencies
+## Association
+ - has many :comments
+ - has many :groups
 
-* Configuration
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|image|text||
+|user_id|integer|null: false, foreign_key: true|
 
-* Database creation
+## Association
+- belongs_to :user
+- belongs_to :group
 
-* Database initialization
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|image|test||
 
-* How to run the test suite
+## Association
+ -has_many :users
+- has_many :comments
+- has_many :grtoup_users
+- has_many  :users,  through:  :groups_users
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## groups_usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
-* ...
+### Association
+- belongs_to :group
+- belongs_to :user
