@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
 
-    .contents__chat--profile__info{
+    &__info{
       padding-left: 40px;
       .contens__chat--profile__info__name{
         padding-top: 35px;
