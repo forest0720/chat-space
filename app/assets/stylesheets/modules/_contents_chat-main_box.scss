@@ -1,0 +1,23 @@
+    .contents_chat-main_box{
+        padding-left: 40px;
+        padding-top: 35px;
+
+      .contents_chat-main_box_tag{
+        display:flex;
+
+        .contents_chat-main_box_tag_name{
+            color: #333333;
+            font-size: 16px;
+        }
+        .contents_chat-main_box_tag_day{
+            color: #999999;
+            font-size: 12px;
+            padding-left:10px;
+        }
+      }
+      .contents_chat-main_box_comment{
+        font-size: 14px;
+        color: #434A54;
+        padding-top: 12px;
+      }
+    }
