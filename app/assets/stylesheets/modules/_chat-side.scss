@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+.header{
+  height:100vh;
+  width:300px;
+
+  &__side--bar{
+    height:100px;
+    background-color: #253141;
+    display: flex;
+
+    &__profile{
+      width: 260px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+    
+      &__name{
+        width:200px;
+        color: white;
+        font-size:16px;
+      }
+      &__icons{
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+        text-decoration: none;
+        padding-right: 5px;
+
+        &__edit{
+          padding-right: 5px;
+        }
+          a{
+            color: #ffffff;
+          }
+      }
+    }
+  }
+
+  &__side--main{
+    height: calc(100vw - 100px);
+    background-color: #2f3e51;
+    display: flex;
+    justify-content: center;
+    &__list{
+      height: 65px;
+      width: 260px;
+      &__group{
+        font-size: 15px;
+        padding-top: 20px;
+        color:white;
+      }
+      &__comment{
+        font-size: 11px;
+        padding-top: 5px;
+        color: white;
+      }
+    }
+  }
+}
+
