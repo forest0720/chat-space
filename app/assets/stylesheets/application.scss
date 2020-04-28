@@ -2,8 +2,11 @@
   display:flex;
 } 
 @import "reset";
+@import"config/colors";
 @import "modules/messages";
 @import "modules/chat-side";
 @import "font-awesome-sprockets";
 @import "font-awesome"; 
 @import"modules/contents_chat-main_box";
+@import"modules/user";
+@import"modules/flash";
