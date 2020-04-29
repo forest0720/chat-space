@@ -4,14 +4,17 @@
       .header__side--bar__profile__name
         = current_user.name
       .header__side--bar__profile__icons
-        = link_to "#", class: "header__side--bar__profile__icons__edit" do
+        = link_to new_group_path, class: "header__side--bar__profile__icons__edit" do
           = icon('far', 'edit')
         = link_to edit_user_path(current_user), class: "header__side--bar__profile__icons__cog" do
           = icon('fa', 'cog')
   
   .header__side--main
     .header__side--main__list
-      .header__side--main__list__group
-        mori
-      .header__side--main__list__comment
-        message
+      - current_user.groups.each do |group|
+        .group
+          = link_to '#' do
+            .header__side--main__list__group
+              =group.name
+            .header__side--main__list__comment
+              message
