@@ -62,7 +62,7 @@
       height: 50px;
       background-color: white;
       display: flex;
-      width: 100vw;
+      width: 1200px;
       justify-content: space-between;
 
         &__main{
@@ -71,6 +71,7 @@
           justify-content: center;
           color:#434a54;
           padding-left: 10px;
+          width: 700px;
         } 
         &__picture{
           display: flex;

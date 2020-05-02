@@ -40,10 +40,11 @@
   }
 
   &__side--main{
-    height: calc(100vw - 100px);
+    height: calc(100vh - 100px);
     background-color: #2f3e51;
     display: flex;
     justify-content: center;
+    overflow: scroll;
     &__list{
       height: 65px;
       width: 260px;

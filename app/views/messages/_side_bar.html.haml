@@ -12,9 +12,10 @@
   .header__side--main
     .header__side--main__list
       - current_user.groups.each do |group|
-        .group
-          = link_to '#' do
+        .group 
+          = link_to group_messages_path(group) do
             .header__side--main__list__group
               =group.name
             .header__side--main__list__comment
-              message
+              =group.show_last_message
+             
