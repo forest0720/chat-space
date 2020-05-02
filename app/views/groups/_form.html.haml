@@ -24,6 +24,6 @@
       = f.collection_check_boxes :user_ids, User.all, :id, :name
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
   .chat-group-form__field.clearfix
-    .chat-group-form__field--left
+    .chat-group-form__field--left 
     .chat-group-form__field--right
       = f.submit class: 'chat-group-form__action-btn'

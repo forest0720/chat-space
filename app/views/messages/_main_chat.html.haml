@@ -2,37 +2,22 @@
   .contents__chat--profile
     .contents__chat--profile__info
       .contents__chat--profile__info__name
-        test
+        = @group.name
       .contents__chat--profile__info__id
-        member_mori
+        - @group.users.each do |user|
+          =user.name
     .contents__chat--profile__sub
       .contents__chat--profile__sub__edit
-        = link_to "#", class: "contents__chat--profile__sub__edit__push" do
+        = link_to edit_group_path(@group), class: "contents__chat--profile__sub__edit__push" do
           Edit
   .contents__chat--main
-    .contents__chat--main__box
-      .contents__chat--main__box__tag
-        .contents__chat--main__box__tag__name
-          mori
-        .contents__chat--main__box__tag__day
-          2019/11/20(wed) 17:43:01
-      .contents__chat--main__box__comment
-        おはよう！
-    .contents__chat--main__box
-      .contents__chat--main__box__tag
-        .contents__chat--main__box__tag__name
-          mori
-        .contents__chat--main__box__tag__day
-          2019/11/20(wed) 17:43:01
-      .contents__chat--main__box__comment
-        おはよう！
+    =render @messages
+
   .contents__chat--form
-    .contents__chat--form__message
-      .contents__chat--form__message__main
-        message
+    = form_for [@group, @message], html: { class: "contents__chat--form__message" } do |f|
+      = f.text_field :content, class: 'contents__chat--form__message__main', placeholder: 'type a message'
       .contents__chat--form__message__picture
-        %label{class: "contents__chat--form__message__picture__image"}
-          = icon('far', 'image')
-          %input{type:"file",class: 'hidden'}
-    .contents__chat--form__send
-      Send
+        = f.label :image, class: 'contents__chat--form__message__picture__image' do
+          = icon('fas', 'image')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'contents__chat--form__send'
