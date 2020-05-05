@@ -49,6 +49,7 @@
   &__chat--main{
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
+    overflow: scroll;
   }
   &__chat--form{
     height: 90px;
