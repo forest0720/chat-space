@@ -61,10 +61,10 @@
 
     &__message{
       height: 50px;
-      background-color: white;
+      // background-color: white;
       display: flex;
-      width: 1200px;
-      justify-content: space-between;
+      width: 100%;
+      // justify-content: space-between;
 
         &__main{
           display: flex;
@@ -72,15 +72,20 @@
           justify-content: center;
           color:#434a54;
           padding-left: 10px;
-          width: 700px;
+          width: 100%;
         } 
         &__picture{
-          display: flex;
+          // display: flex;
           align-items: center;
+          padding-right: 15px;
+          position: relative;
 
           &__image{
             padding-right: 15px;
-
+            font-size: 20px;
+            position: absolute;
+            top: 10px;
+            right: 20px;
           }
           .file{
             display: none;
@@ -96,12 +101,9 @@
 }
 .contents__chat--form__send{
   background-color:#38aef0;
-  width: 140px;
+  width: 110px;
   height:50px;
   color: white;
-  display: flex;
   align-items: center;
-  padding-left:30px;
-  margin-left: 15px;
   font-size: 16px;
 }
